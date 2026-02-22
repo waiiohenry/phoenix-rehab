@@ -249,9 +249,9 @@ function HeroSection() {
 function StatsStrip() {
   const stats = [
     { value: "7+", label: "Disciplines Under One Roof" },
-    { value: "Direct", label: "Billing — ICBC, MSP & More" },
-    { value: "100%", label: "Client-Centred Care" },
-    { value: "Burnaby", label: "Easy Access from Vancouver" },
+    { value: "Direct Billing", label: "ICBC, WSBC, MSP & Extended Health" },
+    { value: "Top-Rated", label: "Patient-Centered Care" },
+    { value: "Boundary Rd", label: "Serving Vancouver & Burnaby" },
   ];
   return (
     <section className="bg-[#e8511a]">

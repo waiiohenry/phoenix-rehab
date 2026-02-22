@@ -80,6 +80,7 @@ const teamPlaceholders = [
     { initials: "Kin", title: "Kinesiologist", color: "bg-green-100 text-green-700" },
     { initials: "Acu", title: "Acupuncturist", color: "bg-purple-100 text-purple-600" },
     { initials: "TCM", title: "TCM Practitioner", color: "bg-amber-100 text-amber-700" },
+    { initials: "CC", title: "Clinical Counsellor", color: "bg-teal-100 text-teal-700" },
 ];
 
 const highlights = [
@@ -316,7 +317,7 @@ function TeamSection() {
                     </motion.div>
                 </AnimatedSection>
 
-                <AnimatedSection className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                <AnimatedSection className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6">
                     {teamPlaceholders.map((member) => (
                         <motion.div
                             key={member.title}
@@ -402,9 +403,9 @@ function HighlightsSection() {
 function StatsBanner() {
     const stats = [
         { value: "7+", label: "Disciplines Under One Roof" },
-        { value: "Direct", label: "Billing — ICBC, MSP & More" },
-        { value: "100%", label: "Client-Centred Care" },
-        { value: "Burnaby", label: "Easy Access from Vancouver" },
+        { value: "Direct Billing", label: "ICBC, WSBC, MSP & Extended Health" },
+        { value: "Top-Rated", label: "Patient-Centered Care" },
+        { value: "Boundary Rd", label: "Serving Vancouver & Burnaby" },
     ];
     return (
         <section className="bg-[#e8511a]">
