@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -8,12 +9,13 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="lg:col-span-1">
                         <div className="mb-4">
-                            <div className="font-black text-xl text-white">
-                                PHOENIX <span className="text-[#e8511a]">REHAB</span>
-                            </div>
-                            <div className="text-[10px] tracking-[0.2em] text-gray-500 font-medium mt-0.5">
-                                REBUILD. RECOVER. RISE.
-                            </div>
+                            <Image
+                                src="/images/logo-notag.svg"
+                                alt="Phoenix Rehab & Holistic Health Centre"
+                                width={220}
+                                height={55}
+                                className="h-14 w-auto brightness-0 invert"
+                            />
                         </div>
                         <p className="text-sm text-gray-400 leading-relaxed mb-5">
                             A multidisciplinary clinic in Burnaby offering physiotherapy,
@@ -114,7 +116,7 @@ export default function Footer() {
                             href="https://phoenixrehab.janeapp.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-5 inline-block bg-[#e8511a] hover:bg-[#c04010] text-white font-bold px-5 py-3 text-xs tracking-widest uppercase transition-colors"
+                            className="mt-5 mb-6 inline-block bg-[#e8511a] hover:bg-[#c04010] text-white font-bold px-5 py-3 text-xs tracking-widest uppercase transition-colors"
                         >
                             Book Appointment
                         </a>

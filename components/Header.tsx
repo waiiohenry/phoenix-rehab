@@ -51,29 +51,19 @@ export default function Header() {
         <>
             <header
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                        ? "bg-white/95 backdrop-blur-md shadow-md"
-                        : "bg-white"
+                    ? "bg-white/95 backdrop-blur-md shadow-md"
+                    : "bg-white"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-                        {/* SVG Phoenix Logo approximation */}
-                        <div className="flex items-center gap-1.5">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 4C14 4 8 10 8 18C8 24 12 29 18 31L20 36L22 31C28 29 32 24 32 18C32 10 26 4 20 4Z" fill="#e8511a" />
-                                <path d="M20 8C20 8 15 14 15 19C15 22 17 24 20 25C23 24 25 22 25 19C25 14 20 8 20 8Z" fill="white" />
-                                <path d="M16 16C16 16 13 20 14 23C15 25 17 26 18 26" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-                            </svg>
-                            <div className="leading-none">
-                                <div className="font-black text-lg tracking-tight text-gray-900">
-                                    PHOENIX <span className="text-[#e8511a]">REHAB</span>
-                                </div>
-                                <div className="text-[9px] tracking-[0.2em] text-gray-500 font-medium">
-                                    REBUILD. RECOVER. RISE.
-                                </div>
-                            </div>
-                        </div>
+                    <Link href="/" className="flex items-center flex-shrink-0">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="/images/logo-tagline.svg"
+                            alt="Phoenix Rehab & Holistic Health Centre"
+                            className="h-12 w-auto"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}

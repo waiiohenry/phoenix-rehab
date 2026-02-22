@@ -164,8 +164,8 @@ function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1800&q=85&auto=format&fit=crop"
-        alt="Physiotherapist helping patient with shoulder mobility"
+        src="/images/hero.webp"
+        alt="Phoenix Rehab clinic — physiotherapy and wellness in Burnaby"
         fill
         priority
         className="object-cover object-center"
@@ -186,7 +186,7 @@ function HeroSection() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#e8511a]/20 border border-[#e8511a]/40 text-orange-300 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 bg-black/30 border border-white/20 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#e8511a] animate-pulse" />
             Burnaby & Vancouver
@@ -239,20 +239,7 @@ function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Bottom scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
-      >
-        <span className="text-white/50 text-xs tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent"
-        />
-      </motion.div>
+
     </section>
   );
 }
@@ -290,7 +277,7 @@ function StatsStrip() {
 
 function ServicesSection() {
   return (
-    <section className="py-24 bg-gray-50" id="services">
+    <section className="py-16 bg-gray-50" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
@@ -419,6 +406,7 @@ function EnvironmentSection() {
                     src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80&auto=format&fit=crop"
                     alt="Treatment room"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -427,6 +415,7 @@ function EnvironmentSection() {
                     src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80&auto=format&fit=crop"
                     alt="Massage therapy session"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -437,6 +426,7 @@ function EnvironmentSection() {
                     src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop"
                     alt="Physiotherapy session"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -445,6 +435,7 @@ function EnvironmentSection() {
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80&auto=format&fit=crop"
                     alt="Acupuncture treatment"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -540,7 +531,7 @@ function CTABanner() {
   return (
     <section className="relative py-28 overflow-hidden bg-[#111827]">
       {/* Background texture */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_#e8511a_0%,_transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_#e8511a_0%,_transparent_60%)]" />
       </div>
