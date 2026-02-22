@@ -70,6 +70,7 @@ export default function Footer() {
                         <ul className="space-y-2.5 text-sm">
                             {[
                                 ["About Us", "/about"],
+                                ["Careers", "/careers"],
                                 ["Our Team", "/physiotherapists-burnaby-vancouver"],
                                 ["ICBC Claims", "/icbc-rehab-burnaby-vancouver"],
                                 ["Insurance Coverage", "/insurance-coverage-burnaby-vancouver"],
