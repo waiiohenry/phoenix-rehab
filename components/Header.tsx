@@ -60,9 +60,9 @@ export default function Header() {
                     <Link href="/" className="flex items-center flex-shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="/images/logo-tagline.svg"
+                            src="/images/logo-notag.svg"
                             alt="Phoenix Rehab & Holistic Health Centre"
-                            className="h-12 w-auto"
+                            className="h-16 w-auto"
                         />
                     </Link>
 

@@ -164,7 +164,7 @@ function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/hero.webp"
+        src="/images/homepage-hero.webp"
         alt="Phoenix Rehab clinic — physiotherapy and wellness in Burnaby"
         fill
         priority
