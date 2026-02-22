@@ -3,15 +3,17 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView, type Variants } from "framer-motion";
+import { motion, useInView, useScroll, useTransform, type Variants } from "framer-motion";
 import {
   Activity,
+  Droplets,
   Heart,
   Zap,
   Brain,
   Dumbbell,
   Leaf,
   Sparkles,
+  Sun,
   ChevronRight,
   MapPin,
   Phone,
@@ -30,7 +32,7 @@ const services = [
     color: "from-orange-500/10 to-orange-500/5",
   },
   {
-    icon: Heart,
+    icon: Droplets,
     title: "Massage Therapy (RMT)",
     description:
       "Registered massage therapists use hands-on techniques to ease muscle tension, reduce pain, and improve circulation.",
@@ -70,7 +72,7 @@ const services = [
     color: "from-teal-500/10 to-teal-500/5",
   },
   {
-    icon: Sparkles,
+    icon: Sun,
     title: "Traditional Chinese Medicine",
     description:
       "Holistic care using herbal remedies, cupping, moxibustion, and Tuina massage to restore balance and well-being.",
@@ -172,10 +174,11 @@ function HeroSection() {
         sizes="100vw"
       />
       {/* Gradient overlay */}
-      <div className="absolute inset-0 hero-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/40 to-black/20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent opacity-60" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-24 w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -186,10 +189,23 @@ function HeroSection() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-black/30 border border-white/20 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
+            className="flex flex-wrap items-center gap-3 mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#e8511a] animate-pulse" />
-            Burnaby & Vancouver
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/95 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#e8511a] animate-pulse shadow-[0_0_8px_rgba(232,81,26,0.8)]" />
+              Burnaby & Vancouver
+            </div>
+
+            <div className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-white/90 text-xs font-bold px-4 py-2 rounded-full backdrop-blur-md">
+              <div className="flex gap-0.5 text-[#F5B041]">
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              </div>
+              <span className="opacity-90 tracking-wide uppercase">5.0 Google Rating</span>
+            </div>
           </motion.div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6">
@@ -254,19 +270,21 @@ function StatsStrip() {
     { value: "Boundary Rd", label: "Serving Vancouver & Burnaby" },
   ];
   return (
-    <section className="bg-[#e8511a]">
+    <section className="relative z-20 -mt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-orange-600">
-          {stats.map((s, i) => (
-            <AnimatedSection key={i}>
-              <div className="py-8 px-6 text-center">
-                <div className="text-3xl font-black text-white mb-1">{s.value}</div>
-                <div className="text-xs text-orange-100 font-medium tracking-wide uppercase">
-                  {s.label}
+        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] overflow-hidden">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            {stats.map((s, i) => (
+              <AnimatedSection key={i}>
+                <div className="py-8 px-6 text-center hover:bg-white/5 transition-colors duration-300">
+                  <div className="text-3xl font-black text-white mb-2 tracking-tight drop-shadow-sm">{s.value}</div>
+                  <div className="text-[11px] text-white/80 font-bold tracking-widest uppercase">
+                    {s.label}
+                  </div>
                 </div>
-              </div>
-            </AnimatedSection>
-          ))}
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -331,18 +349,23 @@ function ServiceCard({
       variants={fadeUp}
     >
       <Link href={svc.href} className="group block h-full">
-        <div className="h-full bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#e8511a]/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-          <div
-            className={`w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
-          >
-            <Icon size={22} className="text-[#e8511a]" />
-          </div>
-          <h3 className="font-bold text-gray-900 mb-2 group-hover:text-[#e8511a] transition-colors">
-            {svc.title}
-          </h3>
-          <p className="text-sm text-gray-500 leading-relaxed">{svc.description}</p>
-          <div className="mt-4 flex items-center gap-1 text-[#e8511a] text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-            Learn more <ChevronRight size={14} />
+        <div className="relative overflow-hidden h-full bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#e8511a]/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          {/* Subtle gradient mesh background on hover */}
+          <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${svc.color}`} />
+
+          <div className="relative z-10">
+            <div
+              className={`w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-[0_8px_16px_rgba(232,81,26,0.15)] transition-all duration-300`}
+            >
+              <Icon size={22} className="text-[#e8511a]" />
+            </div>
+            <h3 className="font-bold text-gray-900 mb-2 group-hover:text-[#e8511a] transition-colors">
+              {svc.title}
+            </h3>
+            <p className="text-sm text-gray-500 leading-relaxed">{svc.description}</p>
+            <div className="mt-4 flex items-center gap-1 text-[#e8511a] text-xs font-semibold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+              Learn more <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </div>
           </div>
         </div>
       </Link>
@@ -353,16 +376,25 @@ function ServiceCard({
 // ─── Environment ──────────────────────────────────────────────────────────────
 
 function EnvironmentSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 60]);
+
   return (
-    <section className="py-24 bg-white">
+    <section ref={containerRef} className="py-32 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Text */}
           <AnimatedSection>
             <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
               Our Clinic
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-black text-gray-900 leading-tight">
+            <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
               An environment
               <br />
               <span className="text-[#e8511a]">built for healing</span>
@@ -397,11 +429,11 @@ function EnvironmentSection() {
             </div>
           </AnimatedSection>
 
-          {/* Image grid */}
-          <AnimatedSection className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="relative h-48 rounded-2xl overflow-hidden">
+          {/* Parallax Image grid */}
+          <div className="relative hidden sm:block">
+            <div className="grid grid-cols-2 gap-6">
+              <motion.div style={{ y: y1 }} className="space-y-6">
+                <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
                   <Image
                     src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80&auto=format&fit=crop"
                     alt="Treatment room"
@@ -410,7 +442,7 @@ function EnvironmentSection() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative h-64 rounded-2xl overflow-hidden">
+                <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg">
                   <Image
                     src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80&auto=format&fit=crop"
                     alt="Massage therapy session"
@@ -419,9 +451,10 @@ function EnvironmentSection() {
                     className="object-cover"
                   />
                 </div>
-              </div>
-              <div className="space-y-4 mt-8">
-                <div className="relative h-64 rounded-2xl overflow-hidden">
+              </motion.div>
+
+              <motion.div style={{ y: y2 }} className="space-y-6 mt-16">
+                <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg">
                   <Image
                     src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop"
                     alt="Physiotherapy session"
@@ -430,7 +463,7 @@ function EnvironmentSection() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative h-48 rounded-2xl overflow-hidden">
+                <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
                   <Image
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80&auto=format&fit=crop"
                     alt="Acupuncture treatment"
@@ -439,16 +472,45 @@ function EnvironmentSection() {
                     className="object-cover"
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
-            {/* Orange accent badge */}
-            <div className="absolute -bottom-4 -left-4 bg-[#e8511a] text-white p-5 rounded-2xl shadow-xl">
-              <div className="text-3xl font-black">7+</div>
-              <div className="text-xs font-medium uppercase tracking-widest opacity-90">
-                Disciplines
+
+            {/* Glass badge */}
+            <motion.div
+              style={{ y: y1 }}
+              className="absolute bottom-20 -left-6 bg-white/70 backdrop-blur-xl border border-white/40 p-6 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] z-10"
+            >
+              <div className="flex items-center gap-4">
+                <div className="text-4xl font-black text-[#e8511a]">7+</div>
+                <div className="text-[11px] font-bold uppercase tracking-widest text-gray-700 leading-tight">
+                  Disciplines<br />Under One Roof
+                </div>
               </div>
+            </motion.div>
+          </div>
+
+          {/* Mobile Image Fallback (No parallax) */}
+          <div className="block sm:hidden space-y-4">
+            <div className="relative h-64 rounded-3xl overflow-hidden shadow-md">
+              <Image
+                src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80&auto=format&fit=crop"
+                alt="Treatment room"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
             </div>
-          </AnimatedSection>
+            <div className="relative h-64 rounded-3xl overflow-hidden shadow-md">
+              <Image
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop"
+                alt="Physiotherapy session"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -480,9 +542,12 @@ function FeatureCard({
 // ─── Direct Billing ───────────────────────────────────────────────────────────
 
 function BillingSection() {
+  // Duplicate array so we can scroll it seamlessly
+  const marqueeItems = [...insurers, ...insurers];
+
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-24 bg-[#0d1117] overflow-hidden border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <AnimatedSection>
           <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
             Hassle-Free
@@ -493,32 +558,40 @@ function BillingSection() {
             so you can focus on getting better, not paperwork.
           </p>
         </AnimatedSection>
+      </div>
 
-        <AnimatedSection>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            {insurers.map((name) => (
-              <div
-                key={name}
-                className="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-[#e8511a]/50 text-gray-300 px-5 py-2.5 rounded-full text-sm font-medium transition-all"
-              >
-                {name}
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/insurance-coverage-burnaby-vancouver"
-              className="text-[#e8511a] hover:text-orange-400 font-semibold inline-flex items-center gap-1 transition-colors"
+      <div className="relative flex overflow-x-hidden group py-4">
+        {/* Fading edges so it doesn't just cut off sharply */}
+        <div className="absolute top-0 left-0 w-16 sm:w-32 h-full bg-gradient-to-r from-[#0d1117] to-transparent z-10" />
+        <div className="absolute top-0 right-0 w-16 sm:w-32 h-full bg-gradient-to-l from-[#0d1117] to-transparent z-10" />
+
+        {/* Marquee Track */}
+        <div className="flex animate-marquee gap-4 sm:gap-6 whitespace-nowrap min-w-full">
+          {marqueeItems.map((name, i) => (
+            <div
+              key={`${name}-${i}`}
+              className="inline-flex items-center justify-center bg-white/5 border border-white/10 hover:border-white/20 text-white/90 px-8 py-5 rounded-2xl text-lg font-bold transition-all duration-300 backdrop-blur-sm"
             >
-              View all insurance providers <ChevronRight size={16} />
-            </Link>
-            <Link
-              href="/icbc-rehab-burnaby-vancouver"
-              className="text-gray-400 hover:text-gray-200 font-semibold inline-flex items-center gap-1 transition-colors"
-            >
-              ICBC car accident claims <ChevronRight size={16} />
-            </Link>
-          </div>
+              {name}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        <AnimatedSection className="flex flex-wrap justify-center gap-8">
+          <Link
+            href="/insurance-coverage-burnaby-vancouver"
+            className="text-[#e8511a] hover:text-orange-400 font-semibold inline-flex items-center gap-1.5 transition-colors"
+          >
+            View all insurance providers <ChevronRight size={16} />
+          </Link>
+          <Link
+            href="/icbc-rehab-burnaby-vancouver"
+            className="text-gray-400 hover:text-gray-200 font-semibold inline-flex items-center gap-1.5 transition-colors"
+          >
+            ICBC car accident claims <ChevronRight size={16} />
+          </Link>
         </AnimatedSection>
       </div>
     </section>

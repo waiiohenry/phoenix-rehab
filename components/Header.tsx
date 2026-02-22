@@ -27,7 +27,7 @@ const team = [
 
 const billing = [
     { label: "ICBC (Car Accident Claims)", href: "/icbc-rehab-burnaby-vancouver" },
-    { label: "Insurance Coverage", href: "/insurance-coverage-burnaby-vancouver" },
+    { label: "Direct Billing & Insurance", href: "/insurance-coverage-burnaby-vancouver" },
 ];
 
 type DropdownKey = "services" | "team" | "billing" | null;
@@ -76,6 +76,7 @@ export default function Header() {
                             items={services}
                             open={openDropdown === "services"}
                             onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
+                            onOpen={() => setOpenDropdown("services")}
                             onClose={() => setOpenDropdown(null)}
                         />
                         <Dropdown
@@ -83,6 +84,7 @@ export default function Header() {
                             items={team}
                             open={openDropdown === "team"}
                             onToggle={() => setOpenDropdown(openDropdown === "team" ? null : "team")}
+                            onOpen={() => setOpenDropdown("team")}
                             onClose={() => setOpenDropdown(null)}
                         />
                         <Dropdown
@@ -90,6 +92,7 @@ export default function Header() {
                             items={billing}
                             open={openDropdown === "billing"}
                             onToggle={() => setOpenDropdown(openDropdown === "billing" ? null : "billing")}
+                            onOpen={() => setOpenDropdown("billing")}
                             onClose={() => setOpenDropdown(null)}
                         />
 
@@ -206,18 +209,20 @@ function Dropdown({
     items,
     open,
     onToggle,
+    onOpen,
     onClose,
 }: {
     label: string;
     items: { label: string; href: string }[];
     open: boolean;
     onToggle: () => void;
+    onOpen?: () => void;
     onClose: () => void;
 }) {
     return (
-        <div className="relative" onMouseLeave={onClose}>
+        <div className="relative py-2" onMouseLeave={onClose}>
             <button
-                onMouseEnter={onToggle}
+                onMouseEnter={onOpen || onToggle}
                 onClick={onToggle}
                 className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#e8511a] transition-colors rounded"
             >

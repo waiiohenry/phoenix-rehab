@@ -80,7 +80,7 @@ const teamPlaceholders = [
     { initials: "Kin", title: "Kinesiologist", color: "bg-green-100 text-green-700" },
     { initials: "Acu", title: "Acupuncturist", color: "bg-purple-100 text-purple-600" },
     { initials: "TCM", title: "TCM Practitioner", color: "bg-amber-100 text-amber-700" },
-    { initials: "CC", title: "Clinical Counsellor", color: "bg-teal-100 text-teal-700" },
+    { initials: "RCC", title: "Clinical Counsellor", color: "bg-teal-100 text-teal-700" },
 ];
 
 const highlights = [
