@@ -1,33 +1,36 @@
-# 🏥 Phoenix Rehab Clinic
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Marketing content and tools repository.
+## Getting Started
 
-## 📁 Directory Structure
+First, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-phoenix-rehab/
-├── marketing/
-│   ├── xiaohongshu/     # 小红书内容
-│   ├── youtube/         # YouTube脚本
-│   └── social-media/    # FB/IG内容
-├── scripts/             # 自动化工具
-├── docs/                # 文档
-└── README.md
-```
 
-## 🎯 Goals
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Create engaging content for rehabilitation clinic
-- Build online presence (小红书, YouTube, FB, IG)
-- Attract more patients
-- Provide valuable health tips
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📝 Notes
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-See `/Users/henry/clawd/memory/` for research and strategies.
+## Learn More
 
-## 🤝 Collaboration
+To learn more about Next.js, take a look at the following resources:
 
-- Work in branches
-- Create PR for review
-- Merge to main after approval
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
