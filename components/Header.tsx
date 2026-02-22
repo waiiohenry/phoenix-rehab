@@ -23,6 +23,7 @@ const team = [
     { label: "Clinical Counselors", href: "/clinical-counselors-burnaby-vancouver" },
     { label: "Kinesiologists", href: "/kinesiologists-burnaby-vancouver" },
     { label: "Acupuncturists & TCM", href: "/acupuncturists-tcm-burnaby-vancouver" },
+    { label: "Careers (We're Hiring)", href: "/careers" },
 ];
 
 const billing = [
