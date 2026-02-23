@@ -3,8 +3,8 @@ import { Client } from '@googlemaps/google-maps-services-js';
 
 const client = new Client({});
 
-// Exporting config to allow revalidation without forcing dynamic
-export const revalidate = 86400; // Cache for 24 hours (86,400 seconds)
+// Force dynamic execution so environment variables are read at runtime on Netlify
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
     const apiKey = process.env.GOOGLE_PLACES_API_KEY;

@@ -291,7 +291,7 @@ function StorySection() {
                                     className="object-cover object-center"
                                 />
                                 {/* Accent badge moved to top-right to avoid overlapping subjects */}
-                                <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl max-w-[220px]">
+                                <div className="absolute bottom-4 right-4 sm:bottom-auto sm:top-8 sm:right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-5 shadow-xl max-w-[200px] sm:max-w-[220px]">
                                     <p className="text-3xl font-black text-[#e8511a]">6+</p>
                                     <p className="text-sm font-semibold text-[#2d2d2d] mt-1">
                                         Disciplines under one roof
@@ -327,7 +327,7 @@ function TeamSection() {
                     </motion.div>
                 </AnimatedSection>
 
-                <AnimatedSection className="flex flex-wrap justify-center gap-x-8 gap-y-12 max-w-5xl mx-auto">
+                <AnimatedSection className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-4 gap-y-10 max-w-5xl mx-auto">
                     {teamPlaceholders.map((member) => {
                         const Icon = member.icon;
                         return (

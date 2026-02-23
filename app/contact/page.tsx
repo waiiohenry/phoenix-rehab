@@ -8,7 +8,7 @@ export default function ContactPage() {
     return (
         <main className="min-h-screen bg-white pt-24 pb-16">
             {/* Hero Section */}
-            <section className="relative w-full h-[35vh] min-h-[350px] flex items-center justify-center overflow-hidden">
+            <section className="relative w-full h-[25vh] min-h-[250px] sm:h-[35vh] sm:min-h-[350px] flex items-center justify-center overflow-hidden">
                 <Image
                     src="/images/pages/contact-hero.png"
                     alt="Clinic Exterior"
@@ -63,7 +63,7 @@ export default function ContactPage() {
                                                 100B - 3300 Boundary Road<br />
                                                 Burnaby, BC V5M 0A8
                                             </p>
-                                            <a href="https://maps.google.com/?q=100B+-+3300+Boundary+Road+Burnaby,+BC+V5M+0A8" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 mt-2 text-[#e8511a] font-semibold hover:text-[#c04010] transition-colors">
+                                            <a href="https://maps.google.com/?q=100B+-+3300+Boundary+Road+Burnaby,+BC+V5M+0A8" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 mt-1 py-2 pr-4 text-[#e8511a] font-semibold hover:text-[#c04010] transition-colors">
                                                 Get Directions <ExternalLink size={14} />
                                             </a>
                                         </div>

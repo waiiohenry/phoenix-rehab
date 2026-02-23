@@ -212,7 +212,7 @@ function HeroSection() {
             </div>
           </motion.div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6">
             YOUR LOCAL{" "}
             <span className="text-[#e8511a]">PARTNER</span>
             <br />
@@ -398,7 +398,7 @@ function EnvironmentSection() {
             <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
               Our Clinic
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-black text-[#2d2d2d] leading-tight">
+            <h2 className="mt-3 text-3xl sm:text-5xl lg:text-6xl font-black text-[#2d2d2d] leading-tight">
               An environment
               <br />
               <span className="text-[#e8511a]">built for healing</span>
@@ -566,8 +566,8 @@ function BillingSection() {
 
       <div className="relative flex overflow-x-hidden group py-4">
         {/* Fading edges so it doesn't just cut off sharply */}
-        <div className="absolute top-0 left-0 w-16 sm:w-32 h-full bg-gradient-to-r from-[#0d1117] to-transparent z-10" />
-        <div className="absolute top-0 right-0 w-16 sm:w-32 h-full bg-gradient-to-l from-[#0d1117] to-transparent z-10" />
+        <div className="absolute top-0 left-0 w-24 sm:w-32 h-full bg-gradient-to-r from-[#0d1117] to-transparent z-10" />
+        <div className="absolute top-0 right-0 w-24 sm:w-32 h-full bg-gradient-to-l from-[#0d1117] to-transparent z-10" />
 
         {/* Marquee Track */}
         <div className="flex animate-marquee gap-4 sm:gap-6 whitespace-nowrap min-w-full">

@@ -63,7 +63,7 @@ export default function Header() {
                         <img
                             src="/images/logo-notag.svg"
                             alt="Phoenix Rehab & Holistic Health Centre"
-                            className="h-16 w-auto"
+                            className="h-12 sm:h-16 w-auto"
                         />
                     </Link>
 

@@ -136,7 +136,7 @@ export default function GoogleReviews() {
                     </div>
 
                     {/* Navigation Buttons */}
-                    <div className="absolute top-1/2 -translate-y-1/2 -left-4 sm:-left-6 lg:-left-12">
+                    <div className="absolute top-1/2 -translate-y-1/2 -left-4 sm:-left-6 lg:-left-12 hidden sm:block">
                         <button
                             onClick={handlePrevious}
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 text-gray-600 hover:text-[#e8511a] hover:-translate-x-1 transition-all z-10"
@@ -145,7 +145,7 @@ export default function GoogleReviews() {
                             <ChevronLeft size={24} />
                         </button>
                     </div>
-                    <div className="absolute top-1/2 -translate-y-1/2 -right-4 sm:-right-6 lg:-right-12">
+                    <div className="absolute top-1/2 -translate-y-1/2 -right-4 sm:-right-6 lg:-right-12 hidden sm:block">
                         <button
                             onClick={handleNext}
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 text-gray-600 hover:text-[#e8511a] hover:translate-x-1 transition-all z-10"
