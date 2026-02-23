@@ -16,9 +16,10 @@ import {
   Sun,
   ChevronRight,
   MapPin,
-  Phone,
   Clock,
+  Phone,
 } from "lucide-react";
+import GoogleReviews from "@/components/GoogleReviews";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -152,6 +153,9 @@ export default function HomePage() {
 
       {/* ── DIRECT BILLING ── */}
       <BillingSection />
+
+      {/* ── GOOGLE REVIEWS ── */}
+      <GoogleReviews />
 
       {/* ── CTA BANNER ── */}
       <CTABanner />
