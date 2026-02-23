@@ -277,12 +277,12 @@ function StatsStrip() {
     <section className="relative z-20 -mt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] overflow-hidden">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/20">
             {stats.map((s, i) => (
-              <AnimatedSection key={i}>
-                <div className="py-8 px-6 text-center hover:bg-white/5 transition-colors duration-300">
-                  <div className="text-3xl font-black text-white mb-2 tracking-tight drop-shadow-sm">{s.value}</div>
-                  <div className="text-[11px] text-white/80 font-bold tracking-widest uppercase">
+              <AnimatedSection key={i} className="bg-[#141b23]/30 backdrop-blur-md">
+                <div className="py-6 px-4 sm:py-8 sm:px-6 text-center hover:bg-white/5 transition-colors duration-300 h-full">
+                  <div className="text-2xl sm:text-3xl font-black text-white mb-1 sm:mb-2 tracking-tight drop-shadow-sm">{s.value}</div>
+                  <div className="text-[10px] sm:text-[11px] text-white/80 font-bold tracking-widest uppercase">
                     {s.label}
                   </div>
                 </div>
