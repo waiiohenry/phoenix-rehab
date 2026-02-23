@@ -14,6 +14,12 @@ import {
     Users,
     Heart,
     Leaf,
+    Activity,
+    Droplets,
+    Zap,
+    Dumbbell,
+    Sun,
+    Brain,
 } from "lucide-react";
 
 // ─── Animation helpers ────────────────────────────────────────────────────────
@@ -74,13 +80,13 @@ const values = [
 ];
 
 const teamPlaceholders = [
-    { initials: "PT", title: "Physiotherapist", color: "bg-orange-100 text-[#e8511a]" },
-    { initials: "RMT", title: "Registered Massage Therapist", color: "bg-rose-100 text-rose-600" },
-    { initials: "DC", title: "Chiropractor", color: "bg-blue-100 text-blue-600" },
-    { initials: "Kin", title: "Kinesiologist", color: "bg-green-100 text-green-700" },
-    { initials: "Acu", title: "Acupuncturist", color: "bg-purple-100 text-purple-600" },
-    { initials: "TCM", title: "TCM Practitioner", color: "bg-amber-100 text-amber-700" },
-    { initials: "RCC", title: "Clinical Counsellor", color: "bg-teal-100 text-teal-700" },
+    { icon: Activity, title: "Physiotherapy", color: "text-[#e8511a] bg-orange-50/80 border-orange-100" },
+    { icon: Droplets, title: "Massage Therapy", color: "text-rose-600 bg-rose-50/80 border-rose-100" },
+    { icon: Zap, title: "Chiropractic", color: "text-blue-600 bg-blue-50/80 border-blue-100" },
+    { icon: Dumbbell, title: "Kinesiology", color: "text-green-700 bg-green-50/80 border-green-100" },
+    { icon: Leaf, title: "Acupuncture", color: "text-teal-600 bg-teal-50/80 border-teal-100" },
+    { icon: Sun, title: "TCM", color: "text-amber-600 bg-amber-50/80 border-amber-100" },
+    { icon: Brain, title: "Clinical Counseling", color: "text-purple-600 bg-purple-50/80 border-purple-100" },
 ];
 
 const highlights = [
@@ -151,8 +157,8 @@ function HeroSection() {
                 sizes="100vw"
                 className="object-cover object-center"
             />
-            {/* Stronger overlay for text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+            {/* A subtle linear gradient darker at the top and bottom to ensure text pops */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
 
             <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
                 <motion.div
@@ -165,7 +171,7 @@ function HeroSection() {
                     </span>
                     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
                         Who We{" "}
-                        <span className="text-[#e8511a]">Are</span>
+                        <span className="font-serif italic font-medium text-white/95">Are</span>
                     </h1>
                     <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
                         A multidisciplinary rehabilitation clinic in Burnaby, built around
@@ -195,7 +201,7 @@ function ValuesSection() {
                                 <div className="w-14 h-14 rounded-2xl bg-[#e8511a]/10 flex items-center justify-center mx-auto mb-5">
                                     <Icon size={26} className="text-[#e8511a]" />
                                 </div>
-                                <h2 className="text-2xl font-black text-gray-900 mb-3">{v.title}</h2>
+                                <h2 className="text-2xl font-black text-[#2d2d2d] mb-3">{v.title}</h2>
                                 <p className="text-gray-500 leading-relaxed">{v.description}</p>
                             </motion.div>
                         );
@@ -210,7 +216,7 @@ function ValuesSection() {
 
 function StorySection() {
     return (
-        <section className="py-24 bg-gray-50">
+        <section className="py-32 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Text */}
@@ -221,7 +227,7 @@ function StorySection() {
                             </span>
                             <h2 className="mt-3 text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-8">
                                 The Phoenix{" "}
-                                <span className="text-[#e8511a]">Story</span>
+                                <span className="font-serif italic font-medium">Story</span>
                             </h2>
                         </motion.div>
 
@@ -238,7 +244,7 @@ function StorySection() {
                                 different modalities could seamlessly intersect to provide complete care
                                 under one roof.
                             </p>
-                            <h3 className="text-xl font-bold text-gray-900 mt-8">
+                            <h3 className="text-xl font-bold text-[#2d2d2d] mt-8">
                                 A Holistic Philosophy: Rising Stronger
                             </h3>
                             <p>
@@ -254,7 +260,7 @@ function StorySection() {
                                 Traditional Chinese Medicine — we don&apos;t just mask the pain. We work
                                 together to identify and treat the root cause of dysfunction.
                             </p>
-                            <h3 className="text-xl font-bold text-gray-900 mt-8">
+                            <h3 className="text-xl font-bold text-[#2d2d2d] mt-8">
                                 Planting Roots in Burnaby
                             </h3>
                             <p>
@@ -270,25 +276,29 @@ function StorySection() {
 
                     {/* Image */}
                     <AnimatedSection>
-                        <motion.div
-                            variants={fadeUp}
-                            className="relative h-[600px] rounded-3xl overflow-hidden shadow-xl"
-                        >
-                            <Image
-                                src="/images/homepage-hero.webp"
-                                alt="Phoenix Rehab physiotherapist with patient"
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover object-center"
-                            />
-                            {/* Subtle accent badge */}
-                            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg max-w-[220px]">
-                                <p className="text-3xl font-black text-[#e8511a]">7+</p>
-                                <p className="text-sm font-semibold text-gray-700 mt-1">
-                                    Disciplines under one roof
-                                </p>
-                            </div>
-                        </motion.div>
+                        <div className="relative">
+                            {/* Subtle background element to anchor the image */}
+                            <div className="absolute -inset-4 bg-gray-200/50 rounded-[40px] -z-10 transform translate-x-3 translate-y-3" />
+                            <motion.div
+                                variants={fadeUp}
+                                className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+                            >
+                                <Image
+                                    src="/images/homepage-hero.webp"
+                                    alt="Phoenix Rehab physiotherapist with patient"
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    className="object-cover object-center"
+                                />
+                                {/* Accent badge moved to top-right to avoid overlapping subjects */}
+                                <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl max-w-[220px]">
+                                    <p className="text-3xl font-black text-[#e8511a]">7+</p>
+                                    <p className="text-sm font-semibold text-[#2d2d2d] mt-1">
+                                        Disciplines under one roof
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
                     </AnimatedSection>
                 </div>
             </div>
@@ -307,7 +317,7 @@ function TeamSection() {
                         <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
                             The People
                         </span>
-                        <h2 className="mt-3 text-4xl sm:text-5xl font-black text-gray-900">
+                        <h2 className="mt-3 text-4xl sm:text-5xl font-black text-[#2d2d2d]">
                             Meet Our Team
                         </h2>
                         <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
@@ -317,24 +327,26 @@ function TeamSection() {
                     </motion.div>
                 </AnimatedSection>
 
-                <AnimatedSection className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6">
-                    {teamPlaceholders.map((member) => (
-                        <motion.div
-                            key={member.title}
-                            variants={fadeUp}
-                            className="flex flex-col items-center text-center group"
-                        >
-                            {/* Avatar placeholder — swap src for real photo when available */}
-                            <div
-                                className={`w-28 h-28 rounded-2xl ${member.color} flex items-center justify-center text-xl font-black mb-4 group-hover:scale-105 transition-transform duration-300 shadow-sm`}
+                <AnimatedSection className="flex flex-wrap justify-center gap-x-8 gap-y-12 max-w-5xl mx-auto">
+                    {teamPlaceholders.map((member) => {
+                        const Icon = member.icon;
+                        return (
+                            <motion.div
+                                key={member.title}
+                                variants={fadeUp}
+                                className="flex flex-col items-center text-center group"
                             >
-                                {member.initials}
-                            </div>
-                            <p className="text-sm font-semibold text-gray-700 leading-snug">
-                                {member.title}
-                            </p>
-                        </motion.div>
-                    ))}
+                                <div
+                                    className={`w-24 h-24 rounded-2xl flex items-center justify-center border transition-all duration-300 shadow-sm ${member.color} group-hover:-translate-y-2 group-hover:shadow-[0_8px_20px_rgba(232,81,26,0.15)] group-hover:border-[#e8511a]/40`}
+                                >
+                                    <Icon size={32} strokeWidth={1.5} />
+                                </div>
+                                <p className="text-sm border-b border-transparent group-hover:border-[#e8511a]/30 pb-0.5 justify-center mt-4 font-semibold text-[#2d2d2d] leading-snug transition-colors group-hover:text-[#e8511a]">
+                                    {member.title}
+                                </p>
+                            </motion.div>
+                        );
+                    })}
                 </AnimatedSection>
 
                 <motion.p
@@ -365,10 +377,10 @@ function HighlightsSection() {
                         <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
                             Our Clinic
                         </span>
-                        <h2 className="mt-3 text-4xl sm:text-5xl font-black text-gray-900">
+                        <h2 className="mt-3 text-4xl sm:text-5xl font-black text-[#2d2d2d]">
                             Built for Healing
                         </h2>
-                        <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                        <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto font-light">
                             Every detail of our space and process is designed to make your
                             recovery experience as seamless and comfortable as possible.
                         </p>
@@ -382,13 +394,13 @@ function HighlightsSection() {
                             <motion.div
                                 key={h.title}
                                 variants={fadeUp}
-                                className="bg-white rounded-2xl p-7 border border-gray-100 hover:border-[#e8511a]/30 hover:shadow-md transition-all duration-300"
+                                className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#e8511a]/20 hover:shadow-lg transition-all duration-300"
                             >
-                                <div className="w-11 h-11 rounded-xl bg-[#e8511a]/10 flex items-center justify-center mb-5">
-                                    <Icon size={20} className="text-[#e8511a]" />
+                                <div className="w-12 h-12 rounded-xl bg-orange-50/80 flex items-center justify-center mb-6">
+                                    <Icon size={24} strokeWidth={1.5} className="text-[#e8511a]" />
                                 </div>
-                                <h3 className="font-bold text-gray-900 mb-2">{h.title}</h3>
-                                <p className="text-sm text-gray-500 leading-relaxed">{h.description}</p>
+                                <h3 className="font-bold text-[#2d2d2d] text-lg mb-2">{h.title}</h3>
+                                <p className="text-sm text-gray-500 font-light leading-relaxed">{h.description}</p>
                             </motion.div>
                         );
                     })}
@@ -408,12 +420,12 @@ function StatsBanner() {
         { value: "Boundary Rd", label: "Serving Vancouver & Burnaby" },
     ];
     return (
-        <section className="bg-[#e8511a]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
+        <section className="bg-[#0d1117]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-800">
                 {stats.map((s) => (
-                    <div key={s.label} className="py-10 px-6 text-center">
-                        <p className="text-3xl sm:text-4xl font-black text-white">{s.value}</p>
-                        <p className="text-xs text-white/75 tracking-widest uppercase mt-2">{s.label}</p>
+                    <div key={s.label} className="py-12 px-6 text-center group">
+                        <p className="text-3xl sm:text-4xl font-black text-[#e8511a] group-hover:scale-105 transition-transform duration-300">{s.value}</p>
+                        <p className="text-xs text-gray-400 tracking-widest uppercase mt-3">{s.label}</p>
                     </div>
                 ))}
             </div>

@@ -43,8 +43,8 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h3>
-                        <ul className="space-y-2.5 text-sm">
+                        <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Services</h3>
+                        <ul className="space-y-4 text-sm">
                             {[
                                 ["Physiotherapy", "/physiotherapy-burnaby-vancouver"],
                                 ["Massage Therapy (RMT)", "/massage-therapy-burnaby-vancouver"],
@@ -66,8 +66,8 @@ export default function Footer() {
 
                     {/* Links */}
                     <div>
-                        <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h3>
-                        <ul className="space-y-2.5 text-sm">
+                        <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Quick Links</h3>
+                        <ul className="space-y-4 text-sm">
                             {[
                                 ["About Us", "/about"],
                                 ["Careers", "/careers"],
@@ -89,8 +89,8 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact</h3>
-                        <div className="space-y-3 text-sm text-gray-400">
+                        <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Contact</h3>
+                        <div className="space-y-4 text-sm text-gray-400">
                             <div>
                                 <p className="font-medium text-gray-300">Address</p>
                                 <p>100B – 3300 Boundary Rd</p>
@@ -117,7 +117,7 @@ export default function Footer() {
                             href="https://phoenixrehab.janeapp.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-5 mb-6 inline-block bg-[#e8511a] hover:bg-[#c04010] text-white font-bold px-5 py-3 text-xs tracking-widest uppercase transition-colors"
+                            className="mt-8 mb-6 inline-block w-full sm:w-auto bg-[#e8511a] hover:bg-[#c04010] text-white font-bold px-10 py-5 text-sm text-center tracking-widest uppercase transition-colors"
                         >
                             Book Appointment
                         </a>

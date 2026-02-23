@@ -173,8 +173,8 @@ function HeroSection() {
         className="object-cover object-center"
         sizes="100vw"
       />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/40 to-black/20" />
+      {/* Gradient overlay for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent opacity-60" />
 
       {/* Content */}
@@ -301,7 +301,7 @@ function ServicesSection() {
           <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
             What We Offer
           </span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-black text-gray-900">
+          <h2 className="mt-3 text-4xl sm:text-5xl font-black text-[#2d2d2d]">
             Our Services
           </h2>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
@@ -359,7 +359,7 @@ function ServiceCard({
             >
               <Icon size={22} className="text-[#e8511a]" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-2 group-hover:text-[#e8511a] transition-colors">
+            <h3 className="font-bold text-[#2d2d2d] mb-2 group-hover:text-[#e8511a] transition-colors">
               {svc.title}
             </h3>
             <p className="text-sm text-gray-500 leading-relaxed">{svc.description}</p>
@@ -394,7 +394,7 @@ function EnvironmentSection() {
             <span className="text-[#e8511a] text-xs font-bold uppercase tracking-widest">
               Our Clinic
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+            <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-black text-[#2d2d2d] leading-tight">
               An environment
               <br />
               <span className="text-[#e8511a]">built for healing</span>
@@ -532,7 +532,7 @@ function FeatureCard({
         <Icon size={16} className="text-[#e8511a]" />
       </div>
       <div>
-        <h4 className="font-bold text-gray-900 text-sm mb-1">{title}</h4>
+        <h4 className="font-bold text-[#2d2d2d] text-sm mb-1">{title}</h4>
         <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
       </div>
     </div>
