@@ -19,7 +19,7 @@ export default function CareersPage() {
     return (
         <main className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-32 pb-20">
+            <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
                 <Image
                     src="/images/careers-hero.png" // We will generate this
                     alt="Phoenix Rehab Clinic - Join Our Team"
@@ -137,7 +137,7 @@ export default function CareersPage() {
                                     </div>
                                 </div>
                                 <a
-                                    href="mailto:admin@phoenixrehab.ca?subject=Application for RMT Position"
+                                    href="mailto:careers@phoenixrehab.ca?subject=Application for RMT Position"
                                     className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0d1117] hover:bg-[#e8511a] text-white font-bold rounded-xl transition-colors"
                                 >
                                     Apply Now <ArrowRight size={18} />
@@ -154,7 +154,7 @@ export default function CareersPage() {
                                 <div>
                                     <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Requirements</h4>
                                     <ul className="space-y-2 text-sm text-gray-600">
-                                        <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Registered and in good standing with the CMTBC.</li>
+                                        <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Registered and in good standing with the CCHPBC.</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Valid liability insurance.</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Strong communication skills and a patient-first approach.</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> New graduates are welcome to apply!</li>
@@ -184,7 +184,7 @@ export default function CareersPage() {
                                     </div>
                                 </div>
                                 <a
-                                    href="mailto:admin@phoenixrehab.ca?subject=Application for Physiotherapist Position"
+                                    href="mailto:careers@phoenixrehab.ca?subject=Application for Physiotherapist Position"
                                     className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0d1117] hover:bg-[#e8511a] text-white font-bold rounded-xl transition-colors"
                                 >
                                     Apply Now <ArrowRight size={18} />
@@ -201,7 +201,7 @@ export default function CareersPage() {
                                 <div>
                                     <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Requirements</h4>
                                     <ul className="space-y-2 text-sm text-gray-600">
-                                        <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Registered and in good standing with the CPTBC.</li>
+                                        <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Registered and in good standing with the CHCPBC.</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Valid professional liability insurance.</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Evidence-based practice style with strong manual skills.</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#e8511a] shrink-0" /> Ability to manage a varied caseload.</li>
@@ -224,14 +224,14 @@ export default function CareersPage() {
                     </p>
 
                     <a
-                        href="mailto:admin@phoenixrehab.ca"
+                        href="mailto:careers@phoenixrehab.ca"
                         className="inline-flex items-center gap-3 bg-[#e8511a] hover:bg-[#c04010] text-white px-8 py-5 rounded-xl font-bold text-lg transition-colors group"
                     >
                         Email Your Resume & Cover Letter
                     </a>
 
                     <p className="mt-8 text-gray-400 text-sm">
-                        admin@phoenixrehab.ca
+                        careers@phoenixrehab.ca
                     </p>
                 </div>
             </section>
