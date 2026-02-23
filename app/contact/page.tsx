@@ -61,9 +61,9 @@ export default function ContactPage() {
                                             <h3 className="font-bold text-gray-900 text-lg mb-1">Our Location</h3>
                                             <p className="leading-relaxed">
                                                 100B - 3300 Boundary Road<br />
-                                                Burnaby, BC V5M 4A4
+                                                Burnaby, BC V5M 0A8
                                             </p>
-                                            <a href="https://maps.google.com/?q=100B+-+3300+Boundary+Road+Burnaby,+BC+V5M+4A4" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 mt-2 text-[#e8511a] font-semibold hover:text-[#c04010] transition-colors">
+                                            <a href="https://maps.google.com/?q=100B+-+3300+Boundary+Road+Burnaby,+BC+V5M+0A8" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 mt-2 text-[#e8511a] font-semibold hover:text-[#c04010] transition-colors">
                                                 Get Directions <ExternalLink size={14} />
                                             </a>
                                         </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                             {/* Google Map Embed */}
                             <div className="flex-grow w-full h-[400px] lg:h-auto min-h-[400px] relative rounded-b-3xl overflow-hidden border-2 border-[#0d1117] shadow-xl">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.204555806437!2d-123.02450892285148!3d49.272491171343714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548677f594fc19fb%3A0xc482cb4ec9e92a2a!2s100B%20-%203300%20Boundary%20Rd%2C%20Burnaby%2C%20BC%20V5M%204A4!5e0!3m2!1sen!2sca!4v1700685600000!5m2!1sen!2sca"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10412.81822322574!2d-123.02450892285148!3d49.272491171343714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548677f594fc19fb%3A0xc482cb4ec9e92a2a!2s100B%20-%203300%20Boundary%20Rd%2C%20Burnaby%2C%20BC%20V5M%200A8!5e0!3m2!1sen!2sca!4v1700685600000!5m2!1sen!2sca"
                                     className="absolute inset-0 w-full h-full border-0"
                                     allowFullScreen
                                     loading="lazy"

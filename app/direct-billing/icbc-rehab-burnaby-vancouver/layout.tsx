@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/direct-billing/icbc-rehab-burnaby-vancouver',
+  },
     title: "ICBC Physiotherapy & Rehab Burnaby & Vancouver | Phoenix Rehab",
     description:
         "ICBC-covered treatments in Burnaby & Vancouver. Physiotherapy, massage therapy, chiropractic, acupuncture, counseling, and kinesiology. Direct billing, no referral needed.",

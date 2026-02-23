@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/services/kinesiology-burnaby-vancouver',
+  },
     title: "Kinesiology & Active Rehab in Burnaby & Vancouver | Phoenix Rehab",
     description:
         "Professional kinesiology and active rehabilitation in Burnaby & Vancouver. Recover strength, mobility, and performance. Direct billing for ICBC.",

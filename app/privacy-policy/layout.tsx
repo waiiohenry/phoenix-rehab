@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/privacy-policy',
+  },
     title: "Privacy Policy | Phoenix Rehab Burnaby & Vancouver",
     description:
         "Learn how Phoenix Rehab collects, uses, and protects your personal information. Read our privacy policy.",
