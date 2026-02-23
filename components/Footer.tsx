@@ -46,14 +46,14 @@ export default function Footer() {
                         <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Services</h3>
                         <ul className="space-y-4 text-sm">
                             {[
-                                ["Physiotherapy", "/physiotherapy-burnaby-vancouver"],
-                                ["Massage Therapy (RMT)", "/massage-therapy-burnaby-vancouver"],
-                                ["Chiropractic Care", "/chiropractic-care-burnaby-vancouver"],
-                                ["Kinesiology", "/kinesiology-burnaby-vancouver"],
-                                ["Acupuncture", "/acupuncture-burnaby-vancouver"],
-                                ["Traditional Chinese Medicine", "/traditional-chinese-medicine-burnaby-vancouver"],
-                                ["Clinical Counseling", "/clinical-counseling-burnaby-vancouver"],
-                                ["Cosmetic Acupuncture", "/cosmetic-acupuncture-burnaby-vancouver"],
+                                ["Physiotherapy", "/services/physiotherapy-burnaby-vancouver"],
+                                ["Massage Therapy (RMT)", "/services/massage-therapy-burnaby-vancouver"],
+                                ["Chiropractic Care", "/services/chiropractic-care-burnaby-vancouver"],
+                                ["Kinesiology", "/services/kinesiology-burnaby-vancouver"],
+                                ["Acupuncture", "/services/acupuncture-burnaby-vancouver"],
+                                ["Traditional Chinese Medicine", "/services/traditional-chinese-medicine-burnaby-vancouver"],
+                                ["Clinical Counseling", "/services/clinical-counseling-burnaby-vancouver"],
+                                ["Cosmetic Acupuncture", "/services/cosmetic-acupuncture-burnaby-vancouver"],
                             ].map(([label, href]) => (
                                 <li key={href}>
                                     <Link href={href} className="text-gray-400 hover:text-[#e8511a] transition-colors">
@@ -70,10 +70,10 @@ export default function Footer() {
                         <ul className="space-y-4 text-sm">
                             {[
                                 ["About Us", "/about"],
-                                ["Careers", "/careers"],
-                                ["Our Team", "/physiotherapists-burnaby-vancouver"],
-                                ["ICBC Claims", "/icbc-rehab-burnaby-vancouver"],
-                                ["Insurance Coverage", "/insurance-coverage-burnaby-vancouver"],
+                                ["Careers", "/team/careers"],
+                                ["Our Team", "/team/physiotherapists-burnaby-vancouver"],
+                                ["ICBC Claims", "/direct-billing/icbc-rehab-burnaby-vancouver"],
+                                ["Insurance Coverage", "/direct-billing/insurance-coverage-burnaby-vancouver"],
                                 ["FAQ", "/faq"],
                                 ["Contact", "/contact"],
                                 ["Privacy Policy", "/privacy-policy"],

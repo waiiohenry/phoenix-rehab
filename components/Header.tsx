@@ -6,29 +6,29 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 const services = [
-    { label: "Physiotherapy", href: "/physiotherapy-burnaby-vancouver" },
-    { label: "Massage Therapy – RMT", href: "/massage-therapy-burnaby-vancouver" },
-    { label: "Chiropractic Care", href: "/chiropractic-care-burnaby-vancouver" },
-    { label: "Clinical Counseling", href: "/clinical-counseling-burnaby-vancouver" },
-    { label: "Kinesiology", href: "/kinesiology-burnaby-vancouver" },
-    { label: "Acupuncture", href: "/acupuncture-burnaby-vancouver" },
-    { label: "Traditional Chinese Medicine", href: "/traditional-chinese-medicine-burnaby-vancouver" },
-    { label: "Cosmetic Acupuncture", href: "/cosmetic-acupuncture-burnaby-vancouver" },
+    { label: "Physiotherapy", href: "/services/physiotherapy-burnaby-vancouver" },
+    { label: "Massage Therapy – RMT", href: "/services/massage-therapy-burnaby-vancouver" },
+    { label: "Chiropractic Care", href: "/services/chiropractic-care-burnaby-vancouver" },
+    { label: "Clinical Counseling", href: "/services/clinical-counseling-burnaby-vancouver" },
+    { label: "Kinesiology", href: "/services/kinesiology-burnaby-vancouver" },
+    { label: "Acupuncture", href: "/services/acupuncture-burnaby-vancouver" },
+    { label: "Traditional Chinese Medicine", href: "/services/traditional-chinese-medicine-burnaby-vancouver" },
+    { label: "Cosmetic Acupuncture", href: "/services/cosmetic-acupuncture-burnaby-vancouver" },
 ];
 
 const team = [
-    { label: "Physiotherapists", href: "/physiotherapists-burnaby-vancouver" },
-    { label: "Registered Massage Therapists", href: "/rmt-burnaby-vancouver" },
-    { label: "Chiropractors", href: "/chiropractors-burnaby-vancouver" },
-    { label: "Clinical Counselors", href: "/clinical-counselors-burnaby-vancouver" },
-    { label: "Kinesiologists", href: "/kinesiologists-burnaby-vancouver" },
-    { label: "Acupuncturists & TCM", href: "/acupuncturists-tcm-burnaby-vancouver" },
-    { label: "Careers (We're Hiring)", href: "/careers" },
+    { label: "Physiotherapists", href: "/team/physiotherapists-burnaby-vancouver" },
+    { label: "Registered Massage Therapists", href: "/team/rmt-burnaby-vancouver" },
+    { label: "Chiropractors", href: "/team/chiropractors-burnaby-vancouver" },
+    { label: "Clinical Counselors", href: "/team/clinical-counselors-burnaby-vancouver" },
+    { label: "Kinesiologists", href: "/team/kinesiologists-burnaby-vancouver" },
+    { label: "Acupuncturists & TCM", href: "/team/acupuncturists-tcm-burnaby-vancouver" },
+    { label: "Careers (We're Hiring)", href: "/team/careers" },
 ];
 
 const billing = [
-    { label: "ICBC (Car Accident Claims)", href: "/icbc-rehab-burnaby-vancouver" },
-    { label: "Direct Billing & Insurance", href: "/insurance-coverage-burnaby-vancouver" },
+    { label: "ICBC (Car Accident Claims)", href: "/direct-billing/icbc-rehab-burnaby-vancouver" },
+    { label: "Direct Billing & Insurance", href: "/direct-billing/insurance-coverage-burnaby-vancouver" },
 ];
 
 type DropdownKey = "services" | "team" | "billing" | null;
@@ -69,7 +69,7 @@ export default function Header() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden lg:flex items-center gap-1">
-                        <NavLink href="/winter-tune-up">Winter Tune-Up</NavLink>
+                        <NavLink href="/promotion/winter-tune-up">Winter Tune-Up</NavLink>
                         <NavLink href="/about">About</NavLink>
 
                         <Dropdown
@@ -149,7 +149,7 @@ export default function Header() {
                                 <button onClick={() => setMobileOpen(false)}><X size={24} /></button>
                             </div>
                             <nav className="p-4 flex flex-col gap-1">
-                                <MobileLink href="/winter-tune-up" close={() => setMobileOpen(false)}>Winter Tune-Up</MobileLink>
+                                <MobileLink href="/promotion/winter-tune-up" close={() => setMobileOpen(false)}>Winter Tune-Up</MobileLink>
                                 <MobileLink href="/about" close={() => setMobileOpen(false)}>About</MobileLink>
 
                                 <MobileDropdown

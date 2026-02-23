@@ -28,7 +28,7 @@ const services = [
     title: "Physiotherapy",
     description:
       "One-on-one care to help you move better and feel stronger — whether recovering from surgery, chronic pain, or a sports injury.",
-    href: "/physiotherapy-burnaby-vancouver",
+    href: "/services/physiotherapy-burnaby-vancouver",
     color: "from-orange-500/10 to-orange-500/5",
   },
   {
@@ -36,7 +36,7 @@ const services = [
     title: "Massage Therapy (RMT)",
     description:
       "Registered massage therapists use hands-on techniques to ease muscle tension, reduce pain, and improve circulation.",
-    href: "/massage-therapy-burnaby-vancouver",
+    href: "/services/massage-therapy-burnaby-vancouver",
     color: "from-rose-500/10 to-rose-500/5",
   },
   {
@@ -44,7 +44,7 @@ const services = [
     title: "Chiropractic Care",
     description:
       "Gentle adjustments to keep your spine and joints at their best — reducing pain and improving natural mobility.",
-    href: "/chiropractic-care-burnaby-vancouver",
+    href: "/services/chiropractic-care-burnaby-vancouver",
     color: "from-blue-500/10 to-blue-500/5",
   },
   {
@@ -52,7 +52,7 @@ const services = [
     title: "Clinical Counseling",
     description:
       "A supportive space to manage stress, anxiety, and life challenges. Build resilience and improve mental well-being.",
-    href: "/clinical-counseling-burnaby-vancouver",
+    href: "/services/clinical-counseling-burnaby-vancouver",
     color: "from-purple-500/10 to-purple-500/5",
   },
   {
@@ -60,7 +60,7 @@ const services = [
     title: "Kinesiology",
     description:
       "Personalized exercise programs to improve strength, posture, and flexibility — whether recovering or staying healthy long-term.",
-    href: "/kinesiology-burnaby-vancouver",
+    href: "/services/kinesiology-burnaby-vancouver",
     color: "from-green-500/10 to-green-500/5",
   },
   {
@@ -68,7 +68,7 @@ const services = [
     title: "Acupuncture",
     description:
       "A natural way to relieve pain and support healing — fine needles targeting stress, tension, and chronic pain.",
-    href: "/acupuncture-burnaby-vancouver",
+    href: "/services/acupuncture-burnaby-vancouver",
     color: "from-teal-500/10 to-teal-500/5",
   },
   {
@@ -76,7 +76,7 @@ const services = [
     title: "Traditional Chinese Medicine",
     description:
       "Holistic care using herbal remedies, cupping, moxibustion, and Tuina massage to restore balance and well-being.",
-    href: "/traditional-chinese-medicine-burnaby-vancouver",
+    href: "/services/traditional-chinese-medicine-burnaby-vancouver",
     color: "from-amber-500/10 to-amber-500/5",
   },
   {
@@ -84,7 +84,7 @@ const services = [
     title: "Cosmetic Acupuncture",
     description:
       "Natural facial rejuvenation using fine acupuncture needles to stimulate collagen, reduce fine lines, and restore a youthful glow.",
-    href: "/cosmetic-acupuncture-burnaby-vancouver",
+    href: "/services/cosmetic-acupuncture-burnaby-vancouver",
     color: "from-pink-500/10 to-pink-500/5",
   },
 ];
@@ -166,7 +166,7 @@ function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/homepage-hero.webp"
+        src="/images/pages/homepage-hero.webp"
         alt="Phoenix Rehab clinic — physiotherapy and wellness in Burnaby"
         fill
         priority
@@ -264,7 +264,7 @@ function HeroSection() {
 
 function StatsStrip() {
   const stats = [
-    { value: "7+", label: "Disciplines Under One Roof" },
+    { value: "6+", label: "Disciplines Under One Roof" },
     { value: "Direct Billing", label: "ICBC, WSBC, MSP & Extended Health" },
     { value: "Top-Rated", label: "Patient-Centered Care" },
     { value: "Boundary Rd", label: "Serving Vancouver & Burnaby" },
@@ -481,7 +481,7 @@ function EnvironmentSection() {
               className="absolute bottom-20 -left-6 bg-white/70 backdrop-blur-xl border border-white/40 p-6 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] z-10"
             >
               <div className="flex items-center gap-4">
-                <div className="text-4xl font-black text-[#e8511a]">7+</div>
+                <div className="text-4xl font-black text-[#e8511a]">6+</div>
                 <div className="text-[11px] font-bold uppercase tracking-widest text-gray-700 leading-tight">
                   Disciplines<br />Under One Roof
                 </div>
@@ -581,13 +581,13 @@ function BillingSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <AnimatedSection className="flex flex-wrap justify-center gap-8">
           <Link
-            href="/insurance-coverage-burnaby-vancouver"
+            href="/direct-billing/insurance-coverage-burnaby-vancouver"
             className="text-[#e8511a] hover:text-orange-400 font-semibold inline-flex items-center gap-1.5 transition-colors"
           >
             View all insurance providers <ChevronRight size={16} />
           </Link>
           <Link
-            href="/icbc-rehab-burnaby-vancouver"
+            href="/direct-billing/icbc-rehab-burnaby-vancouver"
             className="text-gray-400 hover:text-gray-200 font-semibold inline-flex items-center gap-1.5 transition-colors"
           >
             ICBC car accident claims <ChevronRight size={16} />

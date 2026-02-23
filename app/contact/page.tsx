@@ -10,7 +10,7 @@ export default function ContactPage() {
             {/* Hero Section */}
             <section className="relative w-full h-[35vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                 <Image
-                    src="/images/contact-hero.png"
+                    src="/images/pages/contact-hero.png"
                     alt="Clinic Exterior"
                     fill
                     className="object-cover object-center"

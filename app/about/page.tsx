@@ -69,7 +69,7 @@ const values = [
         icon: RefreshCw,
         title: "Recover",
         description:
-            "A collaborative team of 7+ disciplines working together, sharing insights, and building a unified roadmap to your full recovery.",
+            "A collaborative team of 6+ disciplines working together, sharing insights, and building a unified roadmap to your full recovery.",
     },
     {
         icon: TrendingUp,
@@ -150,7 +150,7 @@ function HeroSection() {
     return (
         <section className="relative h-[70vh] min-h-[520px] flex items-center justify-center overflow-hidden">
             <Image
-                src="/images/about-hero.png"
+                src="/images/pages/about-hero.webp"
                 alt="Phoenix Rehab clinic reception — welcoming and modern"
                 fill
                 priority
@@ -284,7 +284,7 @@ function StorySection() {
                                 className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl"
                             >
                                 <Image
-                                    src="/images/homepage-hero.webp"
+                                    src="/images/pages/about-story.webp"
                                     alt="Phoenix Rehab physiotherapist with patient"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -292,7 +292,7 @@ function StorySection() {
                                 />
                                 {/* Accent badge moved to top-right to avoid overlapping subjects */}
                                 <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl max-w-[220px]">
-                                    <p className="text-3xl font-black text-[#e8511a]">7+</p>
+                                    <p className="text-3xl font-black text-[#e8511a]">6+</p>
                                     <p className="text-sm font-semibold text-[#2d2d2d] mt-1">
                                         Disciplines under one roof
                                     </p>
@@ -414,7 +414,7 @@ function HighlightsSection() {
 
 function StatsBanner() {
     const stats = [
-        { value: "7+", label: "Disciplines Under One Roof" },
+        { value: "6+", label: "Disciplines Under One Roof" },
         { value: "Direct Billing", label: "ICBC, WSBC, MSP & Extended Health" },
         { value: "Top-Rated", label: "Patient-Centered Care" },
         { value: "Boundary Rd", label: "Serving Vancouver & Burnaby" },
