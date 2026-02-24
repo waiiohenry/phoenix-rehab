@@ -97,7 +97,7 @@ const team = [
         initials: "PW",
         color: "bg-purple-100 text-purple-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/5",
-        languages: "English, Mandarin, Cantonese",
+        languages: "English, Cantonese, Mandarin",
         specialties: [
             "ICBC Recovery & Sports Injuries",
             "Women's Health & Fertility",
