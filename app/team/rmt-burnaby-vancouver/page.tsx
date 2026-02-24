@@ -7,10 +7,12 @@ import { HeartPulse, Star, Languages, Activity, ArrowRight, User } from "lucide-
 // Bio data extracted from reference page
 const team = [
     {
-        name: "Anita Li",
+        name: "Congcong (Anita) Li",
+        preferredName: "Anita",
         role: "Registered Massage Therapist",
         initials: "AL",
         color: "bg-indigo-100 text-indigo-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/34",
         languages: "English, Mandarin",
         specialties: [
             "Deep Tissue & Swedish Massage",
@@ -30,6 +32,7 @@ const team = [
         role: "Registered Massage Therapist",
         initials: "AA",
         color: "bg-rose-100 text-rose-600",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/10",
         languages: "English",
         specialties: [
             "Sports Injuries",
@@ -48,6 +51,7 @@ const team = [
         role: "Registered Massage Therapist",
         initials: "MF",
         color: "bg-teal-100 text-teal-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/4",
         languages: "English, French",
         specialties: [
             "Fascia Work & Myofascial Release",
@@ -156,12 +160,12 @@ export default function RMTPage() {
                                     </div>
 
                                     <a
-                                        href="https://phoenixrehab.janeapp.com/"
+                                        href={member.bookingLink}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="mt-8 w-full group flex items-center justify-center gap-2 bg-[#0d1117] text-white px-6 py-4 rounded-xl font-bold hover:bg-[#e8511a] transition-colors"
                                     >
-                                        Book with {member.name.split(' ')[0]}
+                                        Book with {member.preferredName || member.name.split(' ')[0]}
                                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </a>
                                 </div>
@@ -170,7 +174,7 @@ export default function RMTPage() {
                                 <div className="lg:w-2/3">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                                         <User className="w-6 h-6 text-gray-300" />
-                                        About {member.name.split(' ')[0]}
+                                        About {member.preferredName || member.name.split(' ')[0]}
                                     </h3>
                                     <div className="prose prose-lg prose-gray text-gray-600 font-medium leading-relaxed max-w-none space-y-6">
                                         {member.bio.map((paragraph, i) => (

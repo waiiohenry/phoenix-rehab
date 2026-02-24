@@ -11,6 +11,7 @@ const team = [
         role: "Registered Clinical Counselor",
         initials: "SL",
         color: "bg-purple-100 text-purple-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/16",
         languages: "English, Cantonese, Mandarin",
         specialties: [
             "ICBC & MVA Recovery",
@@ -137,7 +138,7 @@ export default function ClinicalCounselorsPage() {
                                     </div>
 
                                     <a
-                                        href="https://phoenixrehab.janeapp.com/"
+                                        href={member.bookingLink || "https://phoenixrehab.janeapp.com/"}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="mt-8 w-full group flex items-center justify-center gap-2 bg-[#0d1117] text-white px-6 py-4 rounded-xl font-bold hover:bg-[#e8511a] transition-colors"

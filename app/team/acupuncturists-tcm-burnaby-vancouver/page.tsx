@@ -8,10 +8,12 @@ import { Leaf, Star, Languages, Flower2, ArrowRight, User } from "lucide-react";
 const team = [
     {
         name: "Siyu (Rowan) Sun",
+        preferredName: "Rowan",
         role: "Dr. TCM, Reg. Acupuncturist & TCM Herbalist",
         initials: "RS",
         color: "bg-green-100 text-green-700",
-        languages: "English",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/8",
+        languages: "English, Mandarin",
         specialties: [
             "Neck & Shoulder Pain",
             "Low Back & Hip Disorders",
@@ -27,9 +29,11 @@ const team = [
     },
     {
         name: "Wai Lam (Kelly) Chan",
+        preferredName: "Kelly",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KC",
         color: "bg-teal-100 text-teal-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/28",
         languages: "English, Cantonese, Mandarin",
         specialties: [
             "Women's Health",
@@ -46,9 +50,11 @@ const team = [
     },
     {
         name: "Kyungeun (Kay) Choi",
+        preferredName: "Kay",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KC",
         color: "bg-emerald-100 text-emerald-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/22",
         languages: "English, Korean",
         specialties: [
             "Chronic Pain Management",
@@ -65,9 +71,11 @@ const team = [
     },
     {
         name: "Yufeng (Kenny) Zou",
+        preferredName: "Kenny",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KZ",
         color: "bg-blue-100 text-blue-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/25",
         languages: "English, Mandarin",
         specialties: [
             "ICBC & Sports Injury Recovery",
@@ -84,10 +92,12 @@ const team = [
     },
     {
         name: "Pauline Ching Kei Wong",
+        preferredName: "Pauline",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "PW",
         color: "bg-purple-100 text-purple-700",
-        languages: "English",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/5",
+        languages: "English, Mandarin, Cantonese",
         specialties: [
             "ICBC Recovery & Sports Injuries",
             "Women's Health & Fertility",
@@ -194,12 +204,12 @@ export default function AcupuncturistsTCMPage() {
                                     </div>
 
                                     <a
-                                        href="https://phoenixrehab.janeapp.com/"
+                                        href={member.bookingLink}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="mt-8 w-full group flex items-center justify-center gap-2 bg-[#0d1117] text-white px-6 py-4 rounded-xl font-bold hover:bg-[#e8511a] transition-colors"
                                     >
-                                        Book with {member.name.split(' (')[0].split(' ')[0]}
+                                        Book with {member.preferredName || member.name.split(' (')[0].split(' ')[0]}
                                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </a>
                                 </div>
@@ -208,7 +218,7 @@ export default function AcupuncturistsTCMPage() {
                                 <div className="lg:w-2/3">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                                         <User className="w-6 h-6 text-gray-300" />
-                                        About {member.name.split(' (')[0].split(' ')[0]}
+                                        About {member.preferredName || member.name.split(' (')[0].split(' ')[0]}
                                     </h3>
                                     <div className="prose prose-lg prose-gray text-gray-600 font-medium leading-relaxed max-w-none space-y-6">
                                         {member.bio.map((paragraph, i) => (

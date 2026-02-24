@@ -11,6 +11,7 @@ const team = [
         role: "Registered Kinesiologist (BCAK)",
         initials: "JH",
         color: "bg-orange-100 text-orange-700",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/18",
         languages: "English",
         specialties: [
             "Strength & Conditioning",
@@ -118,7 +119,7 @@ export default function KinesiologistsPage() {
                                     </div>
 
                                     <a
-                                        href="https://phoenixrehab.janeapp.com/"
+                                        href={member.bookingLink}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="mt-8 w-full group flex items-center justify-center gap-2 bg-[#0d1117] text-white px-6 py-4 rounded-xl font-bold hover:bg-[#e8511a] transition-colors"

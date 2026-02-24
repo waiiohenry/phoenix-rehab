@@ -11,6 +11,7 @@ const team = [
         role: "Registered Physiotherapist",
         initials: "RM",
         color: "bg-orange-100 text-[#e8511a]",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/32",
         languages: "English, Hindi, Gujarati, Marathi",
         specialties: [
             "Certified Mulligan Practitioner",
@@ -31,6 +32,7 @@ const team = [
         role: "Registered Physiotherapist",
         initials: "YL",
         color: "bg-blue-100 text-blue-600",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/2",
         languages: "English, Mandarin",
         specialties: [
             "Sports Medicine",
@@ -49,6 +51,7 @@ const team = [
         role: "Registered Physiotherapist",
         initials: "AP",
         color: "bg-emerald-100 text-emerald-600",
+        bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/9",
         languages: "English, Hindi",
         specialties: [
             "Neurosciences Physiotherapy",
@@ -154,7 +157,7 @@ export default function PhysiotherapistsPage() {
                                     </div>
 
                                     <a
-                                        href="https://phoenixrehab.janeapp.com/"
+                                        href={member.bookingLink}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="mt-8 w-full group flex items-center justify-center gap-2 bg-[#0d1117] text-white px-6 py-4 rounded-xl font-bold hover:bg-[#e8511a] transition-colors"
