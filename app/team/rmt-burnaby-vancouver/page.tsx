@@ -7,23 +7,22 @@ import { HeartPulse, Star, Languages, Activity, ArrowRight, User } from "lucide-
 // Bio data extracted from reference page
 const team = [
     {
-        name: "Marc Fortin",
+        name: "Anita Li",
         role: "Registered Massage Therapist",
-        initials: "MF",
-        color: "bg-teal-100 text-teal-700",
-        languages: "English, French",
+        initials: "AL",
+        color: "bg-indigo-100 text-indigo-700",
+        languages: "English, Mandarin",
         specialties: [
-            "Fascia Work & Myofascial Release",
-            "Swedish Massage",
-            "Trigger Point Therapy",
+            "Deep Tissue & Swedish Massage",
+            "Fascial Release & Trigger Point Therapy",
             "Joint Mobilization",
-            "Lymphatic Drainage"
+            "Rotator Cuff Injuries & Tennis Elbow",
+            "Stress Management & Relaxation"
         ],
         bio: [
-            "Marc is a Registered Massage Therapist who has been in practice since 2017. With a calm, attentive presence and a deep understanding of the human body, he creates a supportive environment for every client.",
-            "Marc specializes in fascia work—an approach that targets the connective tissue to improve mobility, reduce pain, and foster long-lasting relief. He also incorporates techniques such as Swedish massage, trigger point therapy, joint mobilization, lymphatic drainage, and myofascial release to support each client's individual needs. His work often focuses on stress reduction, joint health, chronic pain management, and rehabilitation after injury or surgery.",
-            "His therapeutic process begins with listening. Through communication, consent, and assessment, Marc develops treatment plans tailored to each client's unique goals and continually adapts these plans as healing unfolds. He believes that when the client's condition and massage techniques are in the right relationship, massage therapy can truly support the body's natural ability to heal.",
-            "Marc has a reverence for the wisdom of the body and the ways it helps us face trauma, discover resilience, and gain self-knowledge. Outside of practice, he draws inspiration from movement disciplines such as Yoga, Qigong, and Aikido, and is currently exploring the ergonomics of low-impact running. Fully bilingual in English and French, Marc is also deeply connected to family life: he is married with two daughters—one a fellow RMT, and the other a high school performing arts student specializing in Aerial Silks."
+            "Anita is a dedicated Registered Massage Therapist who brings a unique blend of knowledge and life experience to her practice. Originally holding a Bachelor of Arts degree in Economics from the University of British Columbia, she transitioned into massage therapy after discovering a profound passion for helping others through direct, hands-on, and meaningful care. As a graduate of the Pacific Coastal College of Massage Therapy, she is highly committed to understanding the human body and its complexities.",
+            "Her clinical approach focuses on both deep tissue work and relaxation massage, aiming to reduce pain while addressing the underlying musculoskeletal issues that cause discomfort. Anita has a special interest in treating musculotendinous conditions, including rotator cuff injuries and tennis elbow. To ensure each client receives the most effective care, she incorporates a variety of techniques into her tailored treatments, such as fascial release, trigger point therapy, joint mobilization, and Swedish massage.",
+            "Beyond targeted pain relief, Anita recognizes the vital connection between physical tension and mental well-being. She actively integrates techniques designed to lower stress levels and promote overall rest and recovery. Fluent in both English and Mandarin, Anita is dedicated to providing a safe, welcoming environment and creating personalized treatment plans that empower every patient to feel their absolute best."
         ]
     },
     {
@@ -42,6 +41,26 @@ const team = [
         bio: [
             "Anthony Artuso is a dedicated Registered Massage Therapist with a strong focus on restoring function and relieving pain. With experience at Motion Physiotherapy, Anthony has developed a special interest in treating sports injuries, postural realignment issues, and musculoskeletal imbalances. He also provides targeted care for headaches, TMJ (jaw) disorders, craniosacral dysfunctions, and motor vehicle accident (MVA)–related injuries.",
             "Anthony takes a personalized, hands-on approach to therapy, combining evidence-based techniques with a deep understanding of anatomy to support clients in their recovery and long-term wellness. Whether you're managing chronic tension or recovering from injury, his goal is to help you move better and feel your best."
+        ]
+    },
+    {
+        name: "Marc Fortin",
+        role: "Registered Massage Therapist",
+        initials: "MF",
+        color: "bg-teal-100 text-teal-700",
+        languages: "English, French",
+        specialties: [
+            "Fascia Work & Myofascial Release",
+            "Swedish Massage",
+            "Trigger Point Therapy",
+            "Joint Mobilization",
+            "Lymphatic Drainage"
+        ],
+        bio: [
+            "Marc is a Registered Massage Therapist who has been in practice since 2017. With a calm, attentive presence and a deep understanding of the human body, he creates a supportive environment for every client.",
+            "Marc specializes in fascia work—an approach that targets the connective tissue to improve mobility, reduce pain, and foster long-lasting relief. He also incorporates techniques such as Swedish massage, trigger point therapy, joint mobilization, lymphatic drainage, and myofascial release to support each client's individual needs. His work often focuses on stress reduction, joint health, chronic pain management, and rehabilitation after injury or surgery.",
+            "His therapeutic process begins with listening. Through communication, consent, and assessment, Marc develops treatment plans tailored to each client's unique goals and continually adapts these plans as healing unfolds. He believes that when the client's condition and massage techniques are in the right relationship, massage therapy can truly support the body's natural ability to heal.",
+            "Marc has a reverence for the wisdom of the body and the ways it helps us face trauma, discover resilience, and gain self-knowledge. Outside of practice, he draws inspiration from movement disciplines such as Yoga, Qigong, and Aikido, and is currently exploring the ergonomics of low-impact running. Fully bilingual in English and French, Marc is also deeply connected to family life: he is married with two daughters—one a fellow RMT, and the other a high school performing arts student specializing in Aerial Silks."
         ]
     }
 ];
