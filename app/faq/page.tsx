@@ -253,7 +253,7 @@ export default function FAQPage() {
             {/* Hero Section */}
             <section className="relative w-full h-[50vh] min-h-[500px] flex items-center overflow-hidden">
                 <Image
-                    src="/images/pages/faq-hero.png"
+                    src="/images/pages/faq-hero.webp"
                     alt="Clinic Reception"
                     fill
                     className="object-cover object-center"

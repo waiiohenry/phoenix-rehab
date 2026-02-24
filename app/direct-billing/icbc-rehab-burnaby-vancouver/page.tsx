@@ -131,7 +131,7 @@ export default function ICBCRehabPage() {
             {/* Hero Section */}
             <section className="relative w-full h-[75vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-40 pb-20">
                 <Image
-                    src="/images/direct-billing/icbc-hero.png"
+                    src="/images/direct-billing/ICBC-hero.webp"
                     alt="ICBC Post-Accident Rehab"
                     fill
                     className="object-cover object-center"
