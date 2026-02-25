@@ -41,11 +41,24 @@ export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
 
+    const [showBanner, setShowBanner] = useState(false);
+
     useEffect(() => {
+        // Hydration safe banner check
+        const dismissed = localStorage.getItem("winter-tune-up-dismissed");
+        if (!dismissed) {
+            setShowBanner(true);
+        }
+
         const onScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
+
+    const dismissBanner = () => {
+        setShowBanner(false);
+        localStorage.setItem("winter-tune-up-dismissed", "true");
+    };
 
     const toggleMobile = (key: DropdownKey) =>
         setMobileExpanded((prev) => (prev === key ? null : key));
@@ -53,12 +66,39 @@ export default function Header() {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex flex-col ${scrolled
                     ? "bg-white/95 backdrop-blur-md shadow-md"
                     : "bg-white"
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+                <AnimatePresence>
+                    {showBanner && (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="bg-[#e8511a] text-white w-full overflow-hidden shrink-0"
+                        >
+                            <div className="max-w-7xl mx-auto px-10 sm:px-12 py-2 text-[13px] sm:text-sm text-center relative flex items-center justify-center min-h-[36px]">
+                                <div>
+                                    <span className="mr-1">❄️</span> Keep your body moving! Book your seasonal Winter Tune-up today.{" "}
+                                    <Link href="/promotion/winter-tune-up" className="underline font-bold hover:text-white/80 transition-colors ml-1 whitespace-nowrap">
+                                        [Learn More]
+                                    </Link>
+                                </div>
+                                <button
+                                    onClick={dismissBanner}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 p-1.5 hover:bg-white/20 rounded-full transition-colors flex items-center justify-center"
+                                    aria-label="Dismiss announcement"
+                                >
+                                    <X size={16} strokeWidth={2.5} />
+                                </button>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 w-full shrink-0">
                     {/* Logo */}
                     <Link href="/" className="flex items-center flex-shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -71,7 +111,6 @@ export default function Header() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden lg:flex items-center gap-1">
-                        <NavLink href="/promotion/winter-tune-up">Winter Tune-Up</NavLink>
                         <NavLink href="/about">About</NavLink>
 
                         <Dropdown
@@ -151,7 +190,6 @@ export default function Header() {
                                 <button onClick={() => setMobileOpen(false)}><X size={24} /></button>
                             </div>
                             <nav className="p-4 flex flex-col gap-1">
-                                <MobileLink href="/promotion/winter-tune-up" close={() => setMobileOpen(false)}>Winter Tune-Up</MobileLink>
                                 <MobileLink href="/about" close={() => setMobileOpen(false)}>About</MobileLink>
 
                                 <MobileDropdown
