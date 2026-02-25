@@ -28,6 +28,7 @@ const team = [
 
 const billing = [
     { label: "ICBC (Car Accident Claims)", href: "/direct-billing/icbc-rehab-burnaby-vancouver" },
+    { label: "WorkSafeBC (WSBC Claims)", href: "/direct-billing/worksafe-bc-rehab" },
     { label: "Direct Billing & Insurance", href: "/direct-billing/insurance-coverage-burnaby-vancouver" },
 ];
 
