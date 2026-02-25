@@ -221,8 +221,8 @@ export default function ICBCRehabPage() {
                             className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2670&auto=format&fit=crop"
-                                alt="Comforting Clinic Consultation"
+                                src="/images/direct-billing/icbc-car-accident-physiotherapy-neck-treatment-burnaby.webp"
+                                alt="ICBC Physiotherapy Neck Treatment"
                                 fill
                                 className="object-cover"
                             />
@@ -313,8 +313,8 @@ export default function ICBCRehabPage() {
                             className="relative h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2653&auto=format&fit=crop"
-                                alt="Modern Clinic Interior"
+                                src="/images/direct-billing/icbc-multidisciplinary-clinic-interior-burnaby.webp"
+                                alt="Phoenix Rehab Clinic Interior"
                                 fill
                                 className="object-cover"
                             />
