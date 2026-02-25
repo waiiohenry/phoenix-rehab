@@ -83,7 +83,7 @@ export default function WSBCClientComponent() {
             {/* Hero Section */}
             <section className="relative w-full h-[75vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-40 pb-20">
                 <Image
-                    src="/images/direct-billing/ICBC-hero.webp" // Re-using image for now
+                    src="/images/direct-billing/direct-billing-hero.webp" // Re-using image for now
                     alt="WorkSafeBC Workplace Injury Rehab"
                     fill
                     className="object-cover object-center"
@@ -170,7 +170,7 @@ export default function WSBCClientComponent() {
                             className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2670&auto=format&fit=crop"
+                                src="/images/direct-billing/direct-billing-car-accident-physiotherapy-neck-treatment-burnaby.webp"
                                 alt="Physiotherapy Assessment"
                                 fill
                                 className="object-cover"
@@ -222,7 +222,7 @@ export default function WSBCClientComponent() {
                             className="relative h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2653&auto=format&fit=crop"
+                                src="/images/direct-billing/direct-billing-multidisciplinary-clinic-interior-burnaby.webp"
                                 alt="Modern Clinic Interior"
                                 fill
                                 className="object-cover"

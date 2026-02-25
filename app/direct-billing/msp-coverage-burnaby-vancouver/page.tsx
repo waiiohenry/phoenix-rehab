@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         siteName: 'Phoenix Rehab',
         images: [
             {
-                url: '/images/direct-billing/ICBC-hero.webp', // Can update later
+                url: '/images/direct-billing/direct-billing-hero.webp', // Can update later
                 width: 1200,
                 height: 630,
                 alt: 'MSP Subsidized Physiotherapy and Rehab',

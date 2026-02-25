@@ -131,7 +131,7 @@ export default function ICBCRehabPage() {
             {/* Hero Section */}
             <section className="relative w-full h-[75vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-40 pb-20">
                 <Image
-                    src="/images/direct-billing/ICBC-hero.webp"
+                    src="/images/direct-billing/direct-billing-hero.webp"
                     alt="ICBC Post-Accident Rehab"
                     fill
                     className="object-cover object-center"
@@ -221,7 +221,7 @@ export default function ICBCRehabPage() {
                             className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/direct-billing/icbc-car-accident-physiotherapy-neck-treatment-burnaby.webp"
+                                src="/images/direct-billing/direct-billing-car-accident-physiotherapy-neck-treatment-burnaby.webp"
                                 alt="ICBC Physiotherapy Neck Treatment"
                                 fill
                                 className="object-cover"
@@ -313,7 +313,7 @@ export default function ICBCRehabPage() {
                             className="relative h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/direct-billing/icbc-multidisciplinary-clinic-interior-burnaby.webp"
+                                src="/images/direct-billing/direct-billing-multidisciplinary-clinic-interior-burnaby.webp"
                                 alt="Phoenix Rehab Clinic Interior"
                                 fill
                                 className="object-cover"

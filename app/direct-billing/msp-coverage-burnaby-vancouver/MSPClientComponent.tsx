@@ -83,7 +83,7 @@ export default function MSPClientComponent() {
             {/* Hero Section */}
             <section className="relative w-full h-[75vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-40 pb-20">
                 <Image
-                    src="/images/direct-billing/ICBC-hero.webp" // Re-using image for now
+                    src="/images/direct-billing/direct-billing-hero.webp" // Re-using image for now
                     alt="MSP Premium Assistance Rehab"
                     fill
                     className="object-cover object-center"
