@@ -44,15 +44,26 @@ export default function Header() {
     const [showBanner, setShowBanner] = useState(false);
 
     useEffect(() => {
+        let timer: NodeJS.Timeout;
+
         // Hydration safe banner check
         const dismissed = localStorage.getItem("winter-tune-up-dismissed");
         if (!dismissed) {
             setShowBanner(true);
+
+            // Auto-hide the banner after 8 seconds
+            timer = setTimeout(() => {
+                setShowBanner(false);
+            }, 8000);
         }
 
         const onScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
+
+        return () => {
+            if (timer) clearTimeout(timer);
+            window.removeEventListener("scroll", onScroll);
+        };
     }, []);
 
     const dismissBanner = () => {

@@ -28,7 +28,8 @@ const team = [
         ]
     },
     {
-        name: "Yves Shen-Feng Liu",
+        name: "Yves Liu",
+        preferredName: "Yves",
         role: "Registered Physiotherapist",
         initials: "YL",
         color: "bg-blue-100 text-blue-600",

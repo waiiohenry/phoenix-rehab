@@ -70,7 +70,7 @@ const team = [
         ]
     },
     {
-        name: "Yufeng (Kenny) Zou",
+        name: "Kenny Zou",
         preferredName: "Kenny",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KZ",
