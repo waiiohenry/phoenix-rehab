@@ -26,25 +26,6 @@ const team = [
             "Beyond ICBC care, Sailas works extensively with individuals, couples, and families navigating personal and relational challenges. In individual therapy, she offers a safe space to explore emotions. In couples counselling, she helps partners improve communication and emotional connection. In family therapy, she guides families toward healthier patterns and stronger bonds.",
             "Her practice is grounded in empathy, reflective practice, and evidence-based methods, with particular expertise in family therapy and EMDR therapy. With over fifteen years of experience, including time in Hong Kong and Calgary, Sailas brings a rich, multicultural perspective to her work. She is deeply committed to helping clients uncover insights, embrace resilience, and move toward greater well-being."
         ]
-    },
-    {
-        name: "Dr. Solmaz Ammari",
-        role: "Registered Clinical Counselor",
-        initials: "SA",
-        color: "bg-teal-100 text-teal-700",
-        languages: "English, Farsi (Persian)",
-        specialties: [
-            "Couples & Relationship Therapy",
-            "Trauma Recovery & EMDR",
-            "Schema Therapy for Adults",
-            "Anxiety, Depression & Stress",
-            "Refugee & Immigrant Support"
-        ],
-        bio: [
-            "Dr. Solmaz Ammari is a Registered Clinical Counsellor (RCC #23511, BCACC) with over 23 years of professional experience in psychotherapy. She specializes in couples therapy and relationship counselling, trauma recovery, schema therapy for adults, and mental health support for refugees and immigrants. She also provides therapy for anxiety, depression, and stress management.",
-            "With a PhD in Psychology, Dr. Ammari brings an extensive academic and clinical background to her work. She has specialized training in Schema Therapy, as well as additional training in trauma-informed care and couples therapy, including Emotionally Focused Therapy (EFT).",
-            "Her clinical philosophy emphasizes creating a safe, compassionate, and non-judgmental environment where clients feel understood and supported. Drawing on an integrative and evidence-based approach, she helps clients identify patterns, strengthen resilience, and foster meaningful change. She works with ICBC and Blue Cross under the Interim Federal Health Program (IFHP). Outside of work, she enjoys hiking in BC's natural landscapes and participating in artistic workshops such as pottery and painting."
-        ]
     }
 ];
 
