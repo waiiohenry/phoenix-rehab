@@ -439,8 +439,8 @@ function EnvironmentSection() {
               <motion.div style={{ y: y1 }} className="space-y-6">
                 <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80&auto=format&fit=crop"
-                    alt="Treatment room"
+                    src="/images/pages/homepage-manual-therapy.webp"
+                    alt="Manual Therapy"
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
@@ -448,8 +448,8 @@ function EnvironmentSection() {
                 </div>
                 <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80&auto=format&fit=crop"
-                    alt="Massage therapy session"
+                    src="/images/pages/homepage-comfort-environment.webp"
+                    alt="Comfortable Environment"
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
@@ -460,8 +460,8 @@ function EnvironmentSection() {
               <motion.div style={{ y: y2 }} className="space-y-6 mt-16">
                 <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop"
-                    alt="Physiotherapy session"
+                    src="/images/pages/homepage-active-rehabilitation.webp"
+                    alt="Active Rehabilitation"
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
@@ -469,8 +469,8 @@ function EnvironmentSection() {
                 </div>
                 <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80&auto=format&fit=crop"
-                    alt="Acupuncture treatment"
+                    src="/images/pages/homepage-holistic-care.webp"
+                    alt="Holistic Care"
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
@@ -497,8 +497,8 @@ function EnvironmentSection() {
           <div className="block sm:hidden space-y-4">
             <div className="relative h-64 rounded-3xl overflow-hidden shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80&auto=format&fit=crop"
-                alt="Treatment room"
+                src="/images/pages/homepage-manual-therapy.webp"
+                alt="Manual Therapy"
                 fill
                 sizes="100vw"
                 className="object-cover"
@@ -506,8 +506,8 @@ function EnvironmentSection() {
             </div>
             <div className="relative h-64 rounded-3xl overflow-hidden shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop"
-                alt="Physiotherapy session"
+                src="/images/pages/homepage-active-rehabilitation.webp"
+                alt="Active Rehabilitation"
                 fill
                 sizes="100vw"
                 className="object-cover"
