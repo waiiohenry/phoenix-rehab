@@ -10,6 +10,7 @@ const team = [
         name: "Reshma Mehta",
         role: "Registered Physiotherapist",
         initials: "RM",
+        image: "/images/team/pfp/pt-reshma-mehta-burnaby-phoenix-rehab.webp",
         color: "bg-orange-100 text-[#e8511a]",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/32",
         languages: "English, Hindi, Gujarati, Marathi",
@@ -32,6 +33,7 @@ const team = [
         preferredName: "Yves",
         role: "Registered Physiotherapist",
         initials: "YL",
+        image: "/images/team/pfp/pt-yves-liu-burnaby-phoenix-rehab.webp",
         color: "bg-blue-100 text-blue-600",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/2",
         languages: "English, Mandarin",
@@ -51,6 +53,7 @@ const team = [
         name: "Awnee Pandey",
         role: "Registered Physiotherapist",
         initials: "AP",
+        image: "/images/team/pfp/pt-awnee-pandey-burnaby-phoenix-rehab.webp",
         color: "bg-emerald-100 text-emerald-600",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/9",
         languages: "English, Hindi",
@@ -123,9 +126,20 @@ export default function PhysiotherapistsPage() {
 
                                 {/* Left Column: Avatar & Meta */}
                                 <div className="lg:w-1/3 shrink-0 flex flex-col items-center lg:items-start text-center lg:text-left">
-                                    <div className={`w-32 h-32 rounded-3xl ${member.color} flex items-center justify-center mb-6 shadow-inner ring-4 ring-white`}>
-                                        <span className="text-4xl font-black tracking-tighter">{member.initials}</span>
-                                    </div>
+                                    {member.image ? (
+                                        <div className="relative w-32 h-32 rounded-3xl overflow-hidden mb-6 shadow-md ring-4 ring-white shrink-0">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className={`w-32 h-32 rounded-3xl ${member.color} flex items-center justify-center mb-6 shadow-inner ring-4 ring-white shrink-0`}>
+                                            <span className="text-4xl font-black tracking-tighter">{member.initials}</span>
+                                        </div>
+                                    )}
 
                                     <h2 className="text-3xl font-black text-gray-900 mb-2">{member.name}</h2>
                                     <p className="text-[#e8511a] font-bold text-sm tracking-widest uppercase mb-6">

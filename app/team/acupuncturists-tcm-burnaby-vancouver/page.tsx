@@ -11,6 +11,7 @@ const team = [
         preferredName: "Rowan",
         role: "Dr. TCM, Reg. Acupuncturist & TCM Herbalist",
         initials: "RS",
+        image: "/images/team/pfp/tcm-rowan-sun-burnaby-phoenix-rehab.jpeg",
         color: "bg-green-100 text-green-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/8",
         languages: "English, Mandarin",
@@ -32,6 +33,7 @@ const team = [
         preferredName: "Kelly",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KC",
+        image: "/images/team/pfp/tcm-kelly-chan-burnaby-phoenix-rehab.webp",
         color: "bg-teal-100 text-teal-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/28",
         languages: "English, Cantonese, Mandarin",
@@ -53,6 +55,7 @@ const team = [
         preferredName: "Kay",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KC",
+        image: "/images/team/pfp/tcm-kay-choi-burnaby-phoenix-rehab.webp",
         color: "bg-emerald-100 text-emerald-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/22",
         languages: "English, Korean",
@@ -74,6 +77,7 @@ const team = [
         preferredName: "Kenny",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "KZ",
+        image: "/images/team/pfp/tcm-kenny-zou-burnaby-phoenix-rehab.webp",
         color: "bg-blue-100 text-blue-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/25",
         languages: "English, Mandarin",
@@ -95,6 +99,7 @@ const team = [
         preferredName: "Pauline",
         role: "TCM Practitioner, Reg. Acupuncturist & Herbalist",
         initials: "PW",
+        image: "/images/team/pfp/tcm-pauline-wong-burnaby-phoenix-rehab.webp",
         color: "bg-purple-100 text-purple-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/5",
         languages: "English, Cantonese, Mandarin",
@@ -169,9 +174,20 @@ export default function AcupuncturistsTCMPage() {
 
                                 {/* Left Column: Avatar & Meta */}
                                 <div className="lg:w-1/3 shrink-0 flex flex-col items-center lg:items-start text-center lg:text-left">
-                                    <div className={`w-32 h-32 rounded-3xl ${member.color} flex items-center justify-center mb-6 shadow-inner ring-4 ring-white`}>
-                                        <span className="text-4xl font-black tracking-tighter">{member.initials}</span>
-                                    </div>
+                                    {member.image ? (
+                                        <div className="relative w-32 h-32 rounded-3xl overflow-hidden mb-6 shadow-md ring-4 ring-white shrink-0">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                fill
+                                                className="object-cover object-top"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className={`w-32 h-32 rounded-3xl ${member.color} flex items-center justify-center mb-6 shadow-inner ring-4 ring-white shrink-0`}>
+                                            <span className="text-4xl font-black tracking-tighter">{member.initials}</span>
+                                        </div>
+                                    )}
 
                                     <h2 className="text-3xl font-black text-gray-900 mb-2">{member.name}</h2>
                                     <p className="text-[#e8511a] font-bold text-sm tracking-widest uppercase mb-6">

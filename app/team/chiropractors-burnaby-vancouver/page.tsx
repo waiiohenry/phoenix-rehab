@@ -10,6 +10,7 @@ const team = [
         name: "Dr. Dan Sullins",
         role: "Doctor of Chiropractic (D.C.)",
         initials: "DS",
+        image: "/images/team/pfp/dc-dan-sullins-burnaby-phoenix-rehab.webp",
         color: "bg-indigo-100 text-indigo-700",
         bookingLink: "https://phoenixrehab.janeapp.com/#/staff_member/31",
         languages: "English",
@@ -84,9 +85,20 @@ export default function ChiropractorsPage() {
 
                                 {/* Left Column: Avatar & Meta */}
                                 <div className="lg:w-1/3 shrink-0 flex flex-col items-center lg:items-start text-center lg:text-left">
-                                    <div className={`w-32 h-32 rounded-3xl ${member.color} flex items-center justify-center mb-6 shadow-inner ring-4 ring-white`}>
-                                        <span className="text-4xl font-black tracking-tighter">{member.initials}</span>
-                                    </div>
+                                    {member.image ? (
+                                        <div className="relative w-32 h-32 rounded-3xl overflow-hidden mb-6 shadow-md ring-4 ring-white shrink-0">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                fill
+                                                className="object-cover object-top"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className={`w-32 h-32 rounded-3xl ${member.color} flex items-center justify-center mb-6 shadow-inner ring-4 ring-white shrink-0`}>
+                                            <span className="text-4xl font-black tracking-tighter">{member.initials}</span>
+                                        </div>
+                                    )}
 
                                     <h2 className="text-3xl font-black text-gray-900 mb-2">{member.name}</h2>
                                     <p className="text-[#e8511a] font-bold text-sm tracking-widest uppercase mb-6">
